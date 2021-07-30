@@ -1,82 +1,92 @@
-import Head from 'next/head'
+import Head from "next/head";
+import Image from "next/image";
 
-export default function Home() {
+import NavBar from "../components/ui/nav-bar.ui";
+import Typography from "../components/styles/typography.styles";
+import Container from "../components/styles/container.styles";
+import CustomButton from "../components/styles/custom-button.styles";
+import Footer from "../components/ui/footer.ui";
+
+const Home = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <>
       <Head>
-        <title>Create Next App</title>
+        <title>Chat App | App for Team Collaboration</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
-
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
+      <main>
+        <NavBar />
+        <section className="bg-primary-light px-4 min-h-screen flex items-center justify-between md:pb-28 md:pt-40">
+          <Container className="flex justify-between items-center md:flex-col space-y-20">
+            <div className="max-w-md">
+              <Typography variant="headline">Have you best call</Typography>
+              <Typography variant="subtitle" className="mt-2 text-">
+                Fast, easy & unlimited team chat.
+              </Typography>
+              <div className="flex space-x-8 mt-12 sm:flex-col sm:space-y-5 sm:space-x-0">
+                <CustomButton variant="filled">Try for free</CustomButton>
+                <CustomButton variant="outlined" color="white">
+                  Get a demo
+                </CustomButton>
+              </div>
+            </div>
+            <div>
+              <Image src="/Hero Image.png" width={500} height={500} />
+            </div>
+          </Container>
+        </section>
+        <section className="flex flex-col items-center py-28 px-4">
+          <Typography variant="title" className="lg:text-center lg:text-4xl">
+            Connect with your team instantly
+          </Typography>
+          <Typography
+            variant="paragraph"
+            className="text-center max-w-xl mt-14 mb-28 sm:mb-20"
           >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+            commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+            Nulla consequat massa
+          </Typography>
+          <Container>
+            <img src="/chat.png" className="object-contain ml-4" />
+          </Container>
+        </section>
+        <section className="bg-secondary-transparent py-48 flex items-center lg:flex-col-reverse lg:py-28">
+          <div className="-ml-12 w-4/5 lg:self-start lg:mt-28 lg:w-full sm:mt-40">
+            <img src="/startup.png" />
+          </div>
+          <div className="w-full px-4 flex justify-center lg:ml-24 lg:w-auto md:ml-0">
+            <div className="max-w-xl flex flex-col">
+              <Typography variant="title" className="sm:text-4xl">
+                Perfect solutions for small bussinessess
+              </Typography>
+              <Typography variant="paragraph" className="mb-9 mt-5">
+                Pricing planes that fit like a glove.
+              </Typography>
+              <div className="flex space-x-8 md:flex-col md:items-start md:space-x-0 md:space-y-3 md:max-w-sm">
+                <img src="/stars.svg" className="h-7" />
+                <Typography variant="paragraph">
+                  <strong>5,200 bussinesses</strong> use ChatApp and they rate
+                  it as <strong>5-stars</strong>
+                </Typography>
+              </div>
+              <div className="w-2/5 border border-secondary mt-8 rounded-full" />
+              <div className="flex space-x-8 mt-12 h-11 sm:flex-col sm:space-x-0 sm:space-y-5">
+                <CustomButton variant="filled">Try for free</CustomButton>
+                <CustomButton variant="outlined" color="secondary">
+                  Get a demo
+                </CustomButton>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
+      <Footer />
+    </>
+  );
+};
 
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
-    </div>
-  )
-}
+export default Home;
