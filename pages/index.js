@@ -31,7 +31,7 @@ const Home = () => {
                 </CustomButton>
               </div>
             </div>
-            <Container className="max-w-lg">
+            <Container className="p-28">
               <Image src="/Hero Image.png" width={500} height={500} layout="responsive" />
             </Container>
           </Container>
