@@ -22,13 +22,12 @@ const footerLinks = [
 
 const Footer = () => (
   <footer className="py-24 px-4">
-    <Container className="flex justify-between md:flex-col md:space-y-16">
-      <div className="mr-auto flex flex-col items-start h-72 w-48 md:h-60 md:mb-16">
+    <Container className="flex justify-between md:flex-col md:space-y-16 relative">
+      <div className="mr-auto flex flex-col items-start w-48 md:mb-16">
         <img src="/chatapp-logo-blue.svg" className="h-8" />
         <Typography variant="footer-link" className="mb-auto mt-5">
           The last team chat you will ever need
         </Typography>
-        <Typography variant="footer-link">&copy; Copyright Chat App</Typography>
       </div>
       <div className="w-1/5 md:hidden" />
       <div className="flex flex-wrap lg:justify-center md:justify-between xs:flex-col">
@@ -49,6 +48,9 @@ const Footer = () => (
           </div>
         ))}
       </div>
+      <Typography variant="footer-link" className="absolute bottom-0 left-0">
+        &copy; Copyright Chat App
+      </Typography>
     </Container>
   </footer>
 );
