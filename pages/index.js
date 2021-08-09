@@ -31,9 +31,9 @@ const Home = () => {
                 </CustomButton>
               </div>
             </div>
-            <div>
-              <Image src="/Hero Image.png" width={500} height={500} />
-            </div>
+            <Container className="max-w-lg">
+              <Image src="/Hero Image.png" width={500} height={500} layout="responsive" />
+            </Container>
           </Container>
         </section>
         <section className="flex flex-col items-center py-28 px-4">
@@ -53,15 +53,16 @@ const Home = () => {
           <Container>
             <Image
               src="/chat.png"
-              width={1160}
+              width={900}
               height={890}
               className="object-contain ml-4"
+              layout="responsive"
             />
           </Container>
         </section>
         <section className="bg-secondary-transparent py-48 flex items-center lg:flex-col-reverse lg:py-28">
           <div className="-ml-12 w-4/5 lg:self-start lg:mt-28 lg:w-full sm:mt-40">
-            <Image src="/startup.png" width={700} height={700} />
+            <Image src="/startup.png" width={700} height={700} layout="responsive" />
           </div>
           <div className="w-full px-4 flex justify-center lg:ml-24 lg:w-auto md:ml-0">
             <div className="max-w-xl flex flex-col">
