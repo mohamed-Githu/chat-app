@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import Container from "../styles/container.styles";
 import Typography from "../styles/typography.styles";
 
@@ -24,7 +26,12 @@ const Footer = () => (
   <footer className="py-24 px-4">
     <Container className="flex justify-between md:flex-col md:space-y-16 relative">
       <div className="mr-auto flex flex-col items-start w-48 md:mb-16">
-        <img src="/chatapp-logo-blue.svg" className="h-8" />
+        <Image
+          src="/chatapp-logo-blue.svg"
+          className="cursor-pointer"
+          height={33}
+          width={139}
+        />
         <Typography variant="footer-link" className="mb-auto mt-5">
           The last team chat you will ever need
         </Typography>

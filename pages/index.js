@@ -51,12 +51,17 @@ const Home = () => {
             Nulla consequat massa
           </Typography>
           <Container>
-            <img src="/chat.png" className="object-contain ml-4" />
+            <Image
+              src="/chat.png"
+              width={1160}
+              height={890}
+              className="object-contain ml-4"
+            />
           </Container>
         </section>
         <section className="bg-secondary-transparent py-48 flex items-center lg:flex-col-reverse lg:py-28">
           <div className="-ml-12 w-4/5 lg:self-start lg:mt-28 lg:w-full sm:mt-40">
-            <img src="/startup.png" />
+            <Image src="/startup.png" width={700} height={700} />
           </div>
           <div className="w-full px-4 flex justify-center lg:ml-24 lg:w-auto md:ml-0">
             <div className="max-w-xl flex flex-col">
@@ -66,8 +71,10 @@ const Home = () => {
               <Typography variant="paragraph" className="mb-9 mt-5">
                 Pricing planes that fit like a glove.
               </Typography>
-              <div className="flex space-x-8 md:flex-col md:items-start md:space-x-0 md:space-y-3 md:max-w-sm">
-                <img src="/stars.svg" className="h-7" />
+              <div className="flex items-start space-x-8 md:flex-col md:items-start md:space-x-0 md:space-y-3 md:max-w-sm">
+                <div className="mt-1">
+                  <Image src="/stars.svg" width={190} height={33} />
+                </div>
                 <Typography variant="paragraph">
                   <strong>5,200 bussinesses</strong> use ChatApp and they rate
                   it as <strong>5-stars</strong>

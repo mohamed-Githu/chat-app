@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useState } from "react";
 import { MenuIcon } from "@heroicons/react/solid";
 
@@ -13,12 +14,15 @@ const NavBar = () => {
   return (
     <>
       <nav className="fixed top-0 w-full py-5 bg-primary-light z-50 px-4 shadow-lg">
-        <Container className="flex items-center">
-          <img
-            src="/chatapp-logo.svg"
-            alt="chat-app logo"
-            className="mr-auto h-8"
-          />
+        <Container className="flex items-center ">
+          <div className="mr-auto cursor-pointer">
+            <Image
+              src="/chatapp-logo.svg"
+              alt="chat-app logo"
+              height={33}
+              width={139}
+            />
+          </div>
           <MenuIcon
             className="h-8 cursor-pointer text-white hidden lg:inline"
             onClick={handleDrawer}
